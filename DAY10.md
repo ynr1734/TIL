@@ -40,3 +40,42 @@
 
   : 기능이 다르면 둘 다 사용 가능
 
+- 필드(field) = 베리어블(variable)
+
+​		오퍼레이션(operation) = 메소드(method)
+
+---
+
+###### 접근 제어자
+
++ private : 어느 곳에서도 접근 x (캡슐화)
++ default : 같은 패키지에서만 접근 o
++ protected : 상속 관계에서만 접근 o
++ public : 자유로운 접근 가능
+
+---
+
+###### 상속(Inheritance)
+
+- Extends _____________
+  + 컨스트럭터 빼고 상속받음
+  + 없는 부분만 만들어주면 됨
+  + 코드가 굉장히 심플해짐
+
+ex) Employee is a Manager (X) /  Manager is Employee (O) : 'is a~'관계가 성립되어야 상속 가능
+
+- private -> getSalary로 가져오거나 상위의 private를 protected로 바꿔줘야 함 (super.annsalary <- Best)
+- 상속에서는 하나의 공간 안에 여러개의 타입을 담을 수 있다 (Java에서 가능한 유일한 방법 : company App2)
+- Instance of : 배열안에 들어있는 것중에 '~이면' 
+
+​		-> 상속에서 어떤 하위에만 들어있는 함수를 호출할 때 사용
+
+###### 추상(Abstract)
+
+- 객체를 실제로 생성할 수는 없음
+- 실체 클래스의 부모 객체
+- 용도 : 실체 클래스의 공통된 필드와 메소드의 이름을 통일하는 것이 가장 큰 목적
+  + 실체 클래스의 설계자가 여러 명 일 때 (제각기 다른 이름을 통일)
+  + 실체 클래스 필드 작성 시간 절약 (추가만 하면 됨)
+  + 설계 규격을 만들 때 (필드나 메소드를 무조건 상속받아서 사용)
+- 선언 : public abstract class () {}
